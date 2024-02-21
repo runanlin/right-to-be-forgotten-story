@@ -283,25 +283,24 @@ Again. &#39;&#39;Do you remember everything you have ever done?&#39;&#39;
 (set: $returnPoint to &quot;5B&quot;)
 (link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="17" name="7A" tags="" position="1625,450" size="100,100">A Japanese woman named Yukari became famous on Japanese internet as a video of her singing while inebriated was posted online by one of her friends. The video showed Yukari holding a glass, visibly affected by alcohol, and singing something very sensitive and inappropriate. Her life was turned upside down as she became a victim of online harassment, and employers always took the video into account after she got fired from her previous job and sought reemployment.
 
-English sources of this incident do not seem to exist, but an article (in Japanese) can be found here: https://rekisiru.com/24171
+English sources of this incident do not seem to exist, but an article (in Japanese) can be found &lt;a href=&quot;https://rekisiru.com/24171&quot;&gt;here.&lt;/a&gt;
 
-[[Does Yukari have the right to have the video removed?-&gt;Final1]]
+(link: &quot;Does Yukari have the right to have the video removed?&quot;)[
+(set: $returnPoint to &quot;7A&quot;)
+(go-to: &quot;Final1&quot;)
+]
+
 
 ---
 [[[Home-&gt;Beginning]]]
 
-(set: $history to it + (a: &quot;7A&quot;))
-
-(if: $history&#39;s length &gt; 1)[
-    (link: &quot;Go back to previous page&quot;)[
-        (set: $prevPassage to $history&#39;s ($history&#39;s length - 1))
-        (set: $history to $history&#39;s 1stto ($history&#39;s length - 1))
-        (go-to: $prevPassage)
-    ]
-]</tw-passagedata><tw-passagedata pid="18" name="Final2" tags="" position="1775,275" size="100,100">Do you think something you said years, or even decades ago, can accurately represent or define who you are?
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="18" name="Final2" tags="" position="1775,275" size="100,100">Do you think something you said years, or even decades ago, can accurately represent or define who you are?
 (set: $seen_example to false)
 
-[[No.-&gt;Final2B]]
+(link: &quot;No.&quot;)[
+(set: $returnPoint to &quot;Final2&quot;)
+(go-to: &quot;Final2B&quot;)
+]
 (if: $seen_example is true)[[Yes.-&gt;Final2A]]
 (if: $seen_example is false)[[Yes.-&gt;Yukari]]
 
@@ -318,7 +317,6 @@ English sources of this incident do not seem to exist, but an article (in Japane
 ---
 [[[Home-&gt;Beginning]]]
 
-(set: $returnPoint to &quot;Final2&quot;)
 (link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="20" name="Final2A" tags="" position="1900,200" size="100,100">Unfortunately, not everyone would agree with this statement - many people would prefer to have the right to be forgotten on the internet, to have the right to remove content that are relevant to their sensitive personal information. Remember the story of Yukari?
 
 [[The Right to be Forgotten would be able to help Yukari with the video, which contains a lot of her personal information - face, name, etc.-&gt;Final2B]]
@@ -347,9 +345,15 @@ RIght now, countries and international organizations like the E.U. already have 
 (set: $returnPoint to &quot;Final3B&quot;)
 (link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="23" name="Yukari" tags="" position="1775,400" size="100,100">Unfortunately, not everyone would agree with this statement - many people would prefer to have the right to be forgotten on the internet, to have the right to remove content that are relevant to their sensitive personal information.
 
-[[This is the story of Yukari, whose life was significantly impacted by a video that her friends casually recorded. //Content warning: use of alcohol, online harassment//-&gt;7A]]
+(link: &quot;This is the story of Yukari, whose life was significantly impacted by a video that her friends casually recorded. //Content warning: use of alcohol, online harassment//&quot;)[
+(set: $returnPoint to &quot;Yukari&quot;)
+(go-to: &quot;7A&quot;)
+]
 
-[[[[I would prefer to not read about this story.-&gt;Final2B]]]]
+(link: &quot;I would prefer to not read about this story.&quot;)[
+(set: $returnPoint to &quot;Yukari&quot;)
+(go-to: &quot;Final2B&quot;)
+]
 
 
 ---
