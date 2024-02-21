@@ -37,7 +37,9 @@ tw-sidebar {
 .end {
   font-size: 64px;
   font-variant: small-caps
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="550,350" size="100,100">In this story, you will be playing as an upcoming university student with a bright future ahead of them.
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="550,350" size="100,100">(set: $returnPoint to &quot;Intro&quot;)
+
+In this story, you will be playing as an upcoming university student with a bright future ahead of them.
 Let&#39;s start by creating your character. What is their name?
 (input-box: bind $player_name, &quot;XXX=&quot;, 1)
 
@@ -47,8 +49,9 @@ What are their preferred pronouns?
 In this game, you will sometimes be prompted to enter actions by your character. While creativity is encouraged, please keep your responses respectful and appropriate, and refrain from any reference to actions taht are criminal or potentially hateful towards any group.
 
 [[Next-&gt;-&gt;1]]
-[[[Home-&gt;Beginning]]]
-</tw-passagedata><tw-passagedata pid="2" name="Beginning" tags="" position="300,350" size="100,100">&lt;span class=&quot;title&quot;&gt;
+
+
+[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="2" name="Beginning" tags="" position="300,350" size="100,100">&lt;span class=&quot;title&quot;&gt;
 [*&#39;&#39;Do You 
 
 Remember
@@ -64,12 +67,21 @@ You&#39;ve Done? &#39;&#39;*]&lt;/span&gt;
 (input-box: bind $dream_job, &quot;XXX=&quot;, 1)
 
 [[Let&#39;s go to college!-&gt;2]]
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="4" name="2" tags="" position="750,350" size="100,100">During oritentation Week, $player_name is excited. Finally at $poss dream college, $subj is prepared to work hard for $poss dream of becoming a(n) $dream_job. Meanwhile, $subj also feels overwhelmed - there&#39;s so many things to do to get to know more people! Eventually, for $player_name&#39;s first week in college, $subj decides to socialize by...
+
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Intro&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="4" name="2" tags="" position="750,350" size="100,100">During oritentation Week, $player_name is excited. Finally at $poss dream college, $subj is prepared to work hard for $poss dream of becoming a(n) $dream_job. Meanwhile, $subj also feels overwhelmed - there&#39;s so many things to do to get to know more people! Eventually, for $player_name&#39;s first week in college, $subj decides to socialize by...
 
 [[Join a Greek organization, unique to American colleges and universities-&gt;2A]]
 [[Let&#39;s party! //Content warning: use of alcohol//-&gt;2B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="5" name="2A" tags="" position="900,200" size="100,100">$player_name desires entrance into the Greek life of $poss college - an aspect of college life unique to North American universities. As a part of the initation process, $subj ends up...
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;1&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="5" name="2A" tags="" position="900,200" size="100,100">$player_name desires entrance into the Greek life of $poss college - an aspect of college life unique to North American universities. As a part of the initation process, $subj ends up...
 
 (dropdown: bind $2A_action, 
 &quot;dressing up in a squirrel costume and sing on the school quad&quot;, 
@@ -78,26 +90,43 @@ You&#39;ve Done? &#39;&#39;*]&lt;/span&gt;
 
 [[Doing this kind of stuff inevitably means that someone might have taken a picture or video, and maybe even uploaded them.-&gt;3A]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="6" name="2B" tags="" position="900,500" size="100,100">$player_name decides to use $poss first week at college to explore the party scene on campus. 
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;2&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="6" name="2B" tags="" position="900,500" size="100,100">$player_name decides to use $poss first week at college to explore the party scene on campus. 
 
 The clock ticks deeper into the night, to which $player_name and $poss new friends, having the best time of their lives, are entirely oblivious. $player_name feels the unfortunate effects of alcohol creeping into $poss mind. A little inebriated, $subj is driven by instinct to...?
 
 (dropdown: bind $2B_action, 
 &quot;engage in a heated argument with someone about a controversial topic&quot;, 
 &quot;give a speech criticizing the upcoming U.S. presidential election&quot;, 
-&quot;tell a joke about the international students present at the party&quot;)
+&quot;tell a not-so-appropriate joke about the international students present&quot;)
 
 [[Meanwhile, one of $poss friends at the party records all of this and uploads it to their personal YouTube page.-&gt;3B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="7" name="3B" tags="" position="1050,500" size="100,100">Time flies by. $player_name&#39;s friend group joked about that time $subj decided to $2B_action at that party, but they gradually forgot about this incident and the video that was posted. After all, it is impossible to remember everything that they have done in the past, right?
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;2&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]
+]</tw-passagedata><tw-passagedata pid="7" name="3B" tags="" position="1050,500" size="100,100">Time flies by. $player_name&#39;s friend group joked about that time $subj decided to $2B_action at that party, but they gradually forgot about this incident and the video that was posted. After all, it is impossible to remember everything that they have done in the past, right?
 
 [[It is now the third year of school, and $player_name starts looking for an internship.-&gt;4B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="8" name="4B" tags="" position="1200,500" size="100,100">$player_name couldn&#39;t believe it when $subj sees the email. It turns out that $poss application to a dream job of $poss as a(n) $dream_job is accepted! Excited, $subj cannot wait to start working this summer. After all, it&#39;s always good when you love your work. Every day, $player_name anticipates the opportunity to impress with this opportunity, so that $subj can get a return offer and continue working there after $subj graduates.
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;2B&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="8" name="4B" tags="" position="1200,500" size="100,100">$player_name couldn&#39;t believe it when $subj sees the email. It turns out that $poss application to a dream job of $poss as a(n) $dream_job is accepted! Excited, $subj cannot wait to start working this summer. After all, it&#39;s always good when you love your work. Every day, $player_name anticipates the opportunity to impress with this opportunity, so that $subj can get a return offer and continue working there after $subj graduates.
 
 [[One day, just as the semester nears its end, $player_name suddently gets an email from $poss future employer. -&gt;5B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="9" name="5B" tags="" position="1350,500" size="100,100">The subject line of the email is vague, yet ominous enough to send a ripple of anxiety through $subj. 
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;3B&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="9" name="5B" tags="" position="1350,500" size="100,100">The subject line of the email is vague, yet ominous enough to send a ripple of anxiety through $subj. 
 
 $player_name&#39;s heart sinks. The email is from the HR department, stating that they received report of a video online showing $player_name in a state of inebriation during college, making insensitive remarks. 
 
@@ -108,15 +137,27 @@ The tone of the email is professional but firm, explaining that the company has 
 [[This sounds very unrealistic. How could $player_name get fired preemptively from this?-&gt;6C]]
 [[$player_name would really want that video deleted, so that $poss future would not be impacted by something $subj did so long ago.-&gt;Final1]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="10" name="3A" tags="" position="1050,200" size="100,100">Time flies by. $player_name and even $poss friends in College gradually forgot about that time when $player_name had to $2A_action as a part of their initiation process into the Greek life.
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;4B&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="10" name="3A" tags="" position="1050,200" size="100,100">Time flies by. $player_name and even $poss friends in College gradually forgot about that time when $player_name had to $2A_action as a part of their initiation process into the Greek life.
 
 [[As $player_name graduates, $player_name gets $poss dream job as $dream_job. A new chapter in $poss life.-&gt;4A]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="11" name="4A" tags="" position="1200,200" size="100,100">Newly-accepted $dream_job $player_name enters the next chapter of $poss life, moving to a new and foreign environment. While $subj still keeps in contact with $poss friends in college, $subj needs to make new friends in this new environment.
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;2A&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="11" name="4A" tags="" position="1200,200" size="100,100">Newly-accepted $dream_job $player_name enters the next chapter of $poss life, moving to a new and foreign environment. While $subj still keeps in contact with $poss friends in college, $subj needs to make new friends in this new environment.
 
 [[$player_name starts slowly meeting new people from $poss work, and $poss new social circle is coming together.-&gt;5A]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="12" name="5A" tags="" position="1350,200" size="100,100">During a casual get-together with $poss newfound colleagues and friends, the conversation takes a turn towards college life stories. Laughter and jest fill the room.
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;3A&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="12" name="5A" tags="" position="1350,200" size="100,100">During a casual get-together with $poss newfound colleagues and friends, the conversation takes a turn towards college life stories. Laughter and jest fill the room.
 
 One of $player_name&#39;s coworkers, Alex, mentions that he stumbled upon a hilariously awkward video online, featuring what was definitely a Greek organization pledge. To $player_name&#39;s horror, Alex begins describing how the protagonist of that video was recorded $2A_action, not realizing the person in the video is $player_name $obj self. Alex, oblivious to $player_name&#39;s growing discomfort, pulls out a phone, eager to share this found gem with everyone. People gather around.
 
@@ -125,7 +166,11 @@ One of $player_name&#39;s coworkers, Alex, mentions that he stumbled upon a hila
 [[Oh no. That sounds embarrassing. -&gt;6A]]
 [[Hey, I don&#39;t mind!-&gt;6B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="13" name="6A" tags="" position="1600,25" size="100,100">&quot;$player_name, is... is that you?&quot; a voice cuts through the murmur of realization.
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;4A&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="13" name="6A" tags="" position="1600,25" size="100,100">&quot;$player_name, is... is that you?&quot; a voice cuts through the murmur of realization.
 
 $player_name takes a deep breath, the weight of the moment pressing down. $subj knows that hiding or denying it would only make things worse.
 
@@ -135,17 +180,32 @@ The room goes silent for a short while as $subj takes a rather awkward pause, &q
 
 Some of the group chuckles, nodding in agreement. Whatever tension was in the room begins to rapidly dissipate as others start sharing their own embarrassing stories, creating a bond over shared vulnerabilities. While this moment was intensely uncomfortable for $player_name, it still leads to deeper connections and understanding among the group. A happy resolution!
 
-[[Still, $player_name would prefer the video deleted from the internet to avoid future situations like this.-&gt;Final1]]
+(link: &quot;Still, $player_name would prefer the video deleted from the internet to avoid future situations like this.&quot;)[
+  (set: $returnPoint to &quot;6A&quot;)
+  (go-to: &quot;Final1&quot;)
+]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="14" name="6B" tags="" position="1500,200" size="100,100">&quot;Yep, that&#39;s me,&quot; $player_name declares with a wide grin. &quot;I bet you didn&#39;t expect to have a little celebrity among you, huh?&quot;
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;5A&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="14" name="6B" tags="" position="1500,200" size="100,100">&quot;Yep, that&#39;s me,&quot; $player_name declares with a wide grin. &quot;I bet you didn&#39;t expect to have a little celebrity among you, huh?&quot;
 
 The room bursts into laughter. $player_name continues to playfully recount the ridiculous situation in the video of $poss $2A_action.
 
 The group&#39;s response is overwhelmingly positive. This little incident becomes a source of laughter rather than shame, and $player_name earns a lot of respect for handling the situation with such grace and humor.
 
-[[Good thing $player_name doesn&#39;t mind the video being online. But what if $poss does?-&gt;Final1]]
+(link: &quot;Good thing $player_name doesn&#39;t mind the video being online. But what if $poss does?&quot;)[
+  (set: $returnPoint to &quot;6B&quot;)
+  (go-to: &quot;Final1&quot;)
+]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="15" name="Final1" tags="" position="1650,275" size="100,100">This is where
+
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;5A&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="15" name="Final1" tags="" position="1650,275" size="100,100">This is where
 
 &#39;&#39;THE RIGHT TO BE FORGOTTEN&#39;&#39;
 
@@ -154,50 +214,94 @@ Again. &#39;&#39;Do you remember everything you have ever done?&#39;&#39;
 
 [[No. Of course not - it&#39;s quite impossible.-&gt;Final2]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="16" name="6C" tags="" position="1500,450" size="100,100">(set: $seen_example to false)
+
+[[[Home-&gt;Beginning]]]
+
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="16" name="6C" tags="" position="1500,450" size="100,100">(set: $seen_example to false)
 $player_name could not believe what just happened - $poss future, being negatively influenced by a video that $subj did not even know existed, from something that $subj did so long ago! It was something so relatively trivial as well - who knows how many more people might have said or done things of a similar nature? They were just not caught on camera and posted on the internet...
 
 (link: &quot;Unfortunately, things like this can happen in real life. //Content warning: use of alcohol, online harassment//&quot;)[
-  (set: $choiceMade to true)
+  (set: $seen_example to true)
+  (set: $returnPoint to &quot;6C&quot;)
   (go-to: &quot;7A&quot;)
 ]
-[[I would prefer not reading about this story.-&gt;Final1]]
+(link: &quot;I would prefer not to read about this story.&quot;)[
+  (set: $seen_example to false)
+  (set: $returnPoint to &quot;6C&quot;)
+  (go-to: &quot;Final1&quot;)
+]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="17" name="7A" tags="" position="1625,450" size="100,100">A Japanese woman named Yukari became famous on Japanese internet as a video of her singing while inebriated was posted online by one of her friends. The video showed Yukari holding a glass, visibly affected by alcohol, and singing something very sensitive and inappropriate. Her life was turned upside down as she became a victim of online harassment, and employers always took the video into account after she got fired from her previous job and sought reemployment.
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;5B&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="17" name="7A" tags="" position="1625,450" size="100,100">A Japanese woman named Yukari became famous on Japanese internet as a video of her singing while inebriated was posted online by one of her friends. The video showed Yukari holding a glass, visibly affected by alcohol, and singing something very sensitive and inappropriate. Her life was turned upside down as she became a victim of online harassment, and employers always took the video into account after she got fired from her previous job and sought reemployment.
 
 English sources of this incident do not seem to exist, but an article (in Japanese) can be found here: https://rekisiru.com/24171
 
 [[Does Yukari have the right to have the video removed?-&gt;Final1]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="18" name="Final2" tags="" position="1775,275" size="100,100">Do you think something you said years, or even decades ago, can accurately represent or define who you are?
+[[[Home-&gt;Beginning]]]
+
+(set: $history to it + (a: &quot;7A&quot;))
+
+(if: $history&#39;s length &gt; 1)[
+    (link: &quot;Go back to previous page&quot;)[
+        (set: $prevPassage to $history&#39;s ($history&#39;s length - 1))
+        (set: $history to $history&#39;s 1stto ($history&#39;s length - 1))
+        (go-to: $prevPassage)
+    ]
+]</tw-passagedata><tw-passagedata pid="18" name="Final2" tags="" position="1775,275" size="100,100">Do you think something you said years, or even decades ago, can accurately represent or define who you are?
 
 [[No.-&gt;Final2B]]
 (if: $seen_example is true)[[Yes.-&gt;Final2A]]
 (if: $seen_example is false)[[Yes.-&gt;Yukari]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="19" name="Final2B" tags="" position="1900,350" size="100,100">Unfortunately, whether you are comfortable with it or not, in the case of the internet, you have very limited power over what it remembers. Information disseminates, a tweet or a blog can spread around and kept for who-knows-how-long.
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Final1&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="19" name="Final2B" tags="" position="1900,350" size="100,100">Unfortunately, whether you are comfortable with it or not, in the case of the internet, you have very limited power over what it remembers. Information disseminates, a tweet or a blog can spread around and kept for who-knows-how-long.
 
 [[Can&#39;t I just delete things myself?-&gt;Final3B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="20" name="Final2A" tags="" position="1900,200" size="100,100">Unfortunately, not everyone would agree with this statement - many people would prefer to have the right to be forgotten on the internet, to have the right to remove content that are relevant to their sensitive personal information. Remember the story of Yukari?
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Final2&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="20" name="Final2A" tags="" position="1900,200" size="100,100">Unfortunately, not everyone would agree with this statement - many people would prefer to have the right to be forgotten on the internet, to have the right to remove content that are relevant to their sensitive personal information. Remember the story of Yukari?
 
 [[The Right to be Forgotten would be able to help Yukari with the video, which contains a lot of her personal information - face, name, etc.-&gt;Final2B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="21" name="Final3B" tags="" position="2025,350" size="100,100">Well, as you&#39;ve seen from $player_name&#39;s story, (if:seen_example is true) [and from the example of Yukari&#39;s life being ruined,]information about you and your identity are not necessarily &#39;&#39;in your hands.&#39;&#39; They can be posted by other people, things you post can be shared, spread to different platforms, and leaving a multitude of copies that make them extremely hard to trace, not to mention erase. If $poss wanted the things posted about $obj gone, it can be a very complicated process as it involves information that are technically not &#39;&#39;$poss property.&#39;&#39;
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Final2&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="21" name="Final3B" tags="" position="2025,350" size="100,100">Well, as you&#39;ve seen from $player_name&#39;s story, (if:$seen_example is true) [and from the example of Yukari&#39;s life being ruined,]information about you and your identity are not necessarily &#39;&#39;in your hands.&#39;&#39; They can be posted by other people, things you post can be shared, spread to different platforms, and leaving a multitude of copies that make them extremely hard to trace, not to mention erase. If $poss wanted the things posted about $obj gone, it can be a very complicated process as it involves information that are technically not &#39;&#39;$poss property.&#39;&#39;
 
 [[What about freedom of speech? Do I have the right to delete things posted by others?-&gt;Final4B]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="22" name="Final4B" tags="" position="2150,350" size="100,100">This is where &#39;&#39;The Right to be Forgotten&#39;&#39; get complicated.
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Final2B&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="22" name="Final4B" tags="" position="2150,350" size="100,100">This is where &#39;&#39;The Right to be Forgotten&#39;&#39; get complicated.
 RIght now, countries and international organizations like the E.U. already have laws dealing with the right to delete information on the internet, and questions like this are central to how they phrase their laws. The Right of Forgotten, if misdefined, can easily be manipulated by reputation management firms, criminals, etc. to manipulate and infringe on the freedom of speech and expression of other people.
 
 [[For example, if we strip away the legal jargon of the European Union, they define the &#39;&#39;Right to be Forgotten&#39;&#39; as such:-&gt;Final5]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="23" name="Yukari" tags="" position="1775,400" size="100,100">Unfortunately, not everyone would agree with this statement - many people would prefer to have the right to be forgotten on the internet, to have the right to remove content that are relevant to their sensitive personal information.
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Final3B&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="23" name="Yukari" tags="" position="1775,400" size="100,100">Unfortunately, not everyone would agree with this statement - many people would prefer to have the right to be forgotten on the internet, to have the right to remove content that are relevant to their sensitive personal information.
 
 [[This is the story of Yukari, whose life was significantly impacted by a video that her friends casually recorded. //Content warning: use of alcohol, online harassment//-&gt;7A]]
 [[[[I would prefer not reading about this story.-&gt;Final2B]]]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="24" name="Final5" tags="" position="2150,500" size="100,100">&#39;&#39;People can ask a company (through the government)&#39;&#39; to delete their personal information quickly if:
+
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Final2&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="24" name="Final5" tags="" position="2150,500" size="100,100">&#39;&#39;People can ask a company (through the government)&#39;&#39; to delete their personal information quickly if:
 
     The information isn&#39;t needed anymore for the reason it was collected.
     The person takes back their permission to use the data, and there&#39;s no other legal reason to keep using it.
@@ -218,7 +322,10 @@ RIght now, countries and international organizations like the E.U. already have 
     
 [[As you can see, defining the Right to be Forgotten can be complicated.-&gt;Rights]]
 
-[[[Home-&gt;Beginning]]]</tw-passagedata><tw-passagedata pid="25" name="Rights" tags="" position="2150,625" size="100,100">&lt;div class=&quot;end&quot;&gt;
+[[[Home-&gt;Beginning]]]
+
+(set: $returnPoint to &quot;Final4B&quot;)
+(link: &quot;Go back to previous page&quot;)[(go-to: $returnPoint)]</tw-passagedata><tw-passagedata pid="25" name="Rights" tags="" position="2150,625" size="100,100">&lt;div class=&quot;end&quot;&gt;
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[=
 &lt;a href=&quot;https://theclass.website/pages/identity.html#rtbf&quot; target=&quot;_blank&quot;&gt;&#39;&#39;Therefore, 
 
